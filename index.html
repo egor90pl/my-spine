@@ -88,6 +88,19 @@
     </ul>
   </div>
 
+  <section class="block" id="film">
+    <div class="wrap">
+      <h2>Zobacz, jak to działa</h2>
+      <!-- Komputer: film poziomy, telefon (≤ 760 px): pionowy. Ukryty film ma preload="none", więc się nie pobiera. -->
+      <video class="trailer trailer--h" controls preload="none" playsinline poster="video/plakat-poziomy.jpg" width="1920" height="1080">
+        <source src="video/zwiastun-poziomy.webm" type="video/webm">
+      </video>
+      <video class="trailer trailer--v" controls preload="none" playsinline poster="video/plakat-pionowy.jpg" width="1080" height="1920">
+        <source src="video/zwiastun-pionowy.webm" type="video/webm">
+      </video>
+    </div>
+  </section>
+
   <section class="block" id="dzien">
     <div class="wrap">
       <h2>Twój dzień z Moimi Kręgami</h2>
