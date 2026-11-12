@@ -12,6 +12,7 @@
 <link rel="canonical" href="https://mojekregi.eu/">
 <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
 <!--SPRITE: ikony z src/ui/kit/icons.svg (Lucide ISC + własne ikony Moje Kręgi), prefiks i- -->
@@ -22,7 +23,6 @@
 <symbol id="i-mk-kregoslup" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M10.4 3c0 1.9-1.2 2.6-2.8 3-1.7.4-2.3 1.6-2.4 4.4M13.6 3c0 1.9 1.2 2.6 2.8 3 1.7.4 2.3 1.6 2.4 4.4M7.4 9.4c-.3 2 1.6 3.2 1.6 5 0 1.6-1.9 2.8-1.7 5.4M16.6 9.4c.3 2-1.6 3.2-1.6 5 0 1.6 1.9 2.8 1.7 5.4M7.3 19.8c.6.9 3.7 1.4 4.7.1v-1.5M16.7 19.8c-.6.9-3.7 1.4-4.7.1M11.1 4.2h1.8M11.1 6.6h1.8M11.1 9h1.8M11.1 11.4h1.8M11.1 13.8h1.8M11.1 16.2h1.8"/></g></symbol>
 <symbol id="i-mk-core" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M10.4 3c0 1.9-1.2 2.6-2.8 3-1.7.4-2.3 1.6-2.4 4.4M13.6 3c0 1.9 1.2 2.6 2.8 3 1.7.4 2.3 1.6 2.4 4.4M7.4 9.4c-.3 2 1.6 3.2 1.6 5 0 1.6-1.9 2.8-1.7 5.4M16.6 9.4c.3 2-1.6 3.2-1.6 5 0 1.6 1.9 2.8 1.7 5.4M7.3 19.8 12 21.4l4.7-1.6M12 10.8v6.4M10.6 12.4h2.8M10.6 15.4h2.8"/></g></symbol>
 <symbol id="i-mk-biodra" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M8.6 4c.6 2.6.5 3.6-.6 4.9-1.2 1.4-1.7 2.5-1.7 4.1 0 2 .9 4.6 1.6 7M15.4 4c-.6 2.6-.5 3.6.6 4.9 1.2 1.4 1.7 2.5 1.7 4.1 0 2-.9 4.6-1.6 7M6.6 14.4c.7 1.2 2 1.9 3.2 1.9 1.3 0 2.2-1 2.2-2.6 0 1.6.9 2.6 2.2 2.6 1.2 0 2.5-.7 3.2-1.9M12 16.2V20M11.1 5.8h1.8M11.1 8h1.8"/></g></symbol>
-<symbol id="i-mk-biurko" viewBox="0 0 24 24"><g stroke-width="1.2"><circle cx="8.6" cy="5.4" r="2.4"/><path d="M7.2 8.6C6.2 10 6 11.6 6 13.4c0 .9.6 1.6 1.6 1.6h4.2l1 5h1.8M7.8 9.4l1.8 2.4c.3.4.7.6 1.2.6h3M10 12.7h9.4M17.6 12.7v7.5M19.4 7.2l-1.9 5.3M4 10.2c.2 2.2-.1 4 .9 5.6l-1.5 4.4"/></g></symbol>
 <symbol id="i-mk-mata" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M18.2 16H3.4c-.8 0-1.2-.9-.7-1.5l2.8-3.8c.2-.3.5-.4.8-.4h9.4M15.6 10.4c.5-1.6 1.7-2.5 3-2.5 2 0 3.2 1.8 3.2 4.1 0 2.3-1.7 4-3.7 4-1.9 0-3.1-1.2-3.1-2.8 0-1.3 1-2.2 2.1-2.2 1 0 1.7.7 1.7 1.6 0 .7-.5 1.2-1.1 1.2"/></g></symbol>
 <symbol id="i-mk-guma" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M2.4 10.6C2.4 9 4 8 6 8c3.8 0 7.4 4.6 12 4.6 2 0 3.6-.9 3.6-2.4 0-1.6-1.6-2.6-3.6-2.6-4.6 0-8.2 4.6-12 4.6-2 0-3.6-1-3.6-1.6zM2.4 10.6v2.8c0 1.6 1.6 2.6 3.6 2.6 2.6 0 4.6-1.2 6.4-2.5M21.6 10.2v3.2c0 1.6-1.6 2.6-3.6 2.6-2.2 0-3.9-.9-5.6-2.1"/></g></symbol>
 <symbol id="i-mk-guma-kotwica" viewBox="0 0 24 24"><g stroke-width="1.2"><rect x="2.6" y="6" width="1.8" height="12" rx=".6"/><path d="M4.4 10.6h1.4a1.4 1.4 0 0 1 0 2.8H4.4M7.2 12h9.4M16.6 11v2M16.6 11.8l4-2.3c.4-.2.9.1.9.5v4c0 .4-.5.7-.9.5l-4-2.3"/></g></symbol>
@@ -51,6 +51,7 @@
 <symbol id="i-footprints" viewBox="0 0 24 24"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
 </svg>
+<a class="skip" href="#tresc">Przejdź do treści</a>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./"><img src="img/logo-mark.svg" alt="" width="36" height="36">Moje Kręgi</a>
@@ -61,125 +62,132 @@
       <a href="warunki/">Warunki</a>
     </nav>
   </div>
+  <div class="progress" aria-hidden="true"></div>
 </header>
 
-<main>
-  <div class="wrap hero">
-    <div>
-      <p class="eyebrow">Profilaktyka kręgosłupa na co dzień</p>
-      <h1>Codzienny ruch dla Twojego kręgosłupa</h1>
-      <p class="lead">Plan na cały dzień, timer z lektorem po polsku i 74 ćwiczenia na kark, plecy i biodra – dobierane do tego, jak się dziś czujesz i jaki masz sprzęt.</p>
-      <ul class="pills">
-        <li>Jednorazowy zakup</li><li>Bez reklam</li><li>Bez abonamentu</li><li>Bez internetu</li><li>Po polsku</li>
-      </ul>
-      <!-- Po publikacji podmień href na https://play.google.com/store/apps/details?id=pl.rehabpro.karkledzwie i tekst na „Pobierz z Google Play”. -->
-      <a class="btn" href="#dobor">Wkrótce w Google Play</a>
-      <p class="note">Aplikacja na Androida. Wersja tylko w języku polskim.</p>
+<main id="tresc">
+  <section class="hero-band">
+    <div class="deco-wrap" aria-hidden="true"><span class="deco deco--1"></span><span class="deco deco--2"></span><span class="deco deco--3"></span></div>
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow">Profilaktyka kręgosłupa na co dzień</p>
+        <h1>Codzienny ruch dla Twojego <span class="hl">kręgosłupa</span></h1>
+        <p class="lead">Plan na cały dzień, timer z lektorem po polsku i 74 ćwiczenia na kark, plecy i biodra – dobierane do tego, jak się dziś czujesz i jaki masz sprzęt.</p>
+        <ul class="pills">
+          <li>Jednorazowy zakup</li><li>Bez reklam</li><li>Bez abonamentu</li><li>Bez internetu</li><li>Po polsku</li>
+        </ul>
+        <!-- Po publikacji podmień href na https://play.google.com/store/apps/details?id=pl.rehabpro.karkledzwie i tekst na „Pobierz z Google Play”. -->
+        <a class="btn" href="#dobor">Wkrótce w Google Play</a>
+        <p class="note">Aplikacja na Androida. Wersja tylko w języku polskim.</p>
+      </div>
+      <div class="stage">
+        <div class="phone"><img src="img/ekran-timer.png" alt="Timer z lektorem w aplikacji Moje Kręgi" width="540" height="960"></div>
+        <span class="float float--1" aria-hidden="true"><svg><use href="#i-mic-vocal"/></svg>Lektor<br>po polsku</span>
+        <span class="float float--2" aria-hidden="true"><svg><use href="#i-sunrise"/></svg>Plan<br>na cały dzień</span>
+      </div>
     </div>
-    <img class="shot" src="img/ekran-timer.png" alt="Timer z lektorem w aplikacji Moje Kręgi" width="540" height="960">
-  </div>
-
-  <div class="wrap">
-    <ul class="stats" aria-label="W liczbach">
-      <li><strong>74</strong><span>ćwiczenia</span></li>
-      <li><strong>3</strong><span>pory dnia</span></li>
-      <li><strong>5</strong><span>lektorów</span></li>
-      <li><strong>0 zł</strong><span>abonamentu</span></li>
-    </ul>
-  </div>
+    <div class="wrap">
+      <ul class="stats" aria-label="W liczbach">
+        <li><strong data-count="74">74</strong><span>ćwiczenia</span></li>
+        <li><strong data-count="3">3</strong><span>pory dnia</span></li>
+        <li><strong data-count="5">5</strong><span>lektorów</span></li>
+        <li><strong>0 zł</strong><span>abonamentu</span></li>
+      </ul>
+    </div>
+  </section>
 
   <section class="block" id="film">
     <div class="wrap">
-      <h2>Zobacz, jak to działa</h2>
-      <!-- Komputer: film poziomy, telefon (≤ 760 px): pionowy. Ukryty film ma preload="none", więc się nie pobiera. -->
-      <video class="trailer trailer--h" controls preload="none" playsinline poster="video/plakat-poziomy.jpg" width="1920" height="1080">
-        <source src="video/zwiastun-poziomy.webm" type="video/webm">
-      </video>
-      <video class="trailer trailer--v" controls preload="none" playsinline poster="video/plakat-pionowy.jpg" width="1080" height="1920">
-        <source src="video/zwiastun-pionowy.webm" type="video/webm">
-      </video>
+      <h2 class="reveal">Zobacz, jak to działa</h2>
+      <div class="frame reveal">
+        <video class="trailer trailer--h" controls preload="none" playsinline poster="video/plakat-poziomy.jpg" width="1920" height="1080">
+          <source src="video/zwiastun-poziomy.webm" type="video/webm">
+        </video>
+        <video class="trailer trailer--v" controls preload="none" playsinline poster="video/plakat-pionowy.jpg" width="1080" height="1920">
+          <source src="video/zwiastun-pionowy.webm" type="video/webm">
+        </video>
+      </div>
     </div>
   </section>
 
   <section class="block" id="dzien">
     <div class="wrap">
-      <h2>Twój dzień z Moimi Kręgami</h2>
-      <p class="intro">Krótkie sesje wplecione w zwykły dzień – bez szukania czasu na długi trening.</p>
-      <div class="grid3">
-        <div class="card feat"><span class="ico"><svg><use href="#i-sunrise"/></svg></span><h3>Rano</h3><p>Kilkuminutowa sesja na rozruszanie karku, pleców i bioder po nocy.</p></div>
-        <div class="card feat"><span class="ico"><svg><use href="#i-coffee"/></svg></span><h3>Przerwy od siedzenia</h3><p>Krótkie zestawy przy biurku, z przypomnieniem co ustalony czas.</p></div>
-        <div class="card feat"><span class="ico"><svg><use href="#i-sunset"/></svg></span><h3>Wieczór</h3><p>Spokojniejsza sesja i raport dnia: jak się czujesz, co dolegało.</p></div>
+      <h2 class="reveal">Twój dzień z Moimi Kręgami</h2>
+      <p class="intro reveal">Krótkie sesje wplecione w zwykły dzień – bez szukania czasu na długi trening.</p>
+      <div class="grid3 day">
+        <div class="card feat reveal"><span class="ico"><svg><use href="#i-sunrise"/></svg></span><h3>Rano</h3><p>Kilkuminutowa sesja na rozruszanie karku, pleców i bioder po nocy.</p></div>
+        <div class="card feat reveal"><span class="ico"><svg><use href="#i-coffee"/></svg></span><h3>Przerwy od siedzenia</h3><p>Krótkie zestawy przy biurku, z przypomnieniem co ustalony czas.</p></div>
+        <div class="card feat reveal"><span class="ico"><svg><use href="#i-sunset"/></svg></span><h3>Wieczór</h3><p>Spokojniejsza sesja i raport dnia: jak się czujesz, co dolegało.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="block alt" id="dobor">
+  <section class="block band band--deep" id="dobor">
     <div class="wrap">
-      <h2>Jak aplikacja dobiera ćwiczenia</h2>
-      <p class="intro">Za planem stoi silnik doboru, który działa jak lejek: najpierw odsiewa to, co dziś może zaszkodzić, potem z bezpiecznej puli wybiera ćwiczenia najlepiej dopasowane do Ciebie i ustala dawkę. Każdą decyzję widzisz w aplikacji pod „Jak dopasowano plan”.</p>
+      <h2 class="reveal">Jak aplikacja dobiera ćwiczenia</h2>
+      <p class="intro reveal">Za planem stoi silnik doboru, który działa jak lejek: najpierw odsiewa to, co dziś może zaszkodzić, potem z bezpiecznej puli wybiera ćwiczenia najlepiej dopasowane do Ciebie i ustala dawkę. Każdą decyzję widzisz w aplikacji pod „Jak dopasowano plan”.</p>
       <ol class="funnel">
-        <li><span class="ico"><svg><use href="#i-shield-alert"/></svg></span><div><h3>Najpierw bezpieczeństwo</h3><p>Objawy alarmowe z wywiadu i raportów zawsze kończą się zaleceniem konsultacji z lekarzem, a przy poważnych plan nie proponuje ćwiczeń. Przeciwwskazania (np. osteoporoza, ciąża, stan po operacji) wykluczają nieodpowiednie ćwiczenia. Tych filtrów nic nie zdejmuje – gdy brakuje zamiennika, aplikacja wybiera łagodniejszą wersję albo krótszy plan.</p></div></li>
-        <li><span class="ico"><svg><use href="#i-sliders-horizontal"/></svg></span><div><h3>Dopasowanie do Ciebie</h3><p>Liczy się sprzęt, który masz, wybrany poziom trudności, obszary, na których chcesz się skupić, i ból karku oraz lędźwi z ostatnich raportów – wygładzony, żeby jeden gorszy dzień nie wywracał całego planu.</p></div></li>
-        <li><span class="ico"><svg><use href="#i-shuffle"/></svg></span><div><h3>Równowaga i różnorodność</h3><p>Plan uzupełnia to, czego brakowało w ostatnim tygodniu, nie powtarza ciągle tych samych ćwiczeń i rozkłada pracę między poranek, przerwy i wieczór.</p></div></li>
-        <li><span class="ico"><svg><use href="#i-activity"/></svg></span><div><h3>Dawka na dziś</h3><p>Serie, powtórzenia i czas mieszczą się w bezpiecznych widełkach. Po zgłoszonym bólu albo reakcji na ćwiczenie dawka maleje, a przy stabilnym samopoczuciu może stopniowo rosnąć.</p></div></li>
-        <li><span class="ico"><svg><use href="#i-refresh-cw"/></svg></span><div><h3>Plan reaguje na raport</h3><p>Po raporcie dnia aplikacja przelicza nierozpoczęte sesje: wieczorną, kolejne przerwy i plany na następne dni.</p></div></li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-shield-alert"/></svg></span><div><h3>Najpierw bezpieczeństwo</h3><p>Objawy alarmowe z wywiadu i raportów zawsze kończą się zaleceniem konsultacji z lekarzem, a przy poważnych plan nie proponuje ćwiczeń. Przeciwwskazania (np. osteoporoza, ciąża, stan po operacji) wykluczają nieodpowiednie ćwiczenia. Tych filtrów nic nie zdejmuje – gdy brakuje zamiennika, aplikacja wybiera łagodniejszą wersję albo krótszy plan.</p></div></li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-sliders-horizontal"/></svg></span><div><h3>Dopasowanie do Ciebie</h3><p>Liczy się sprzęt, który masz, wybrany poziom trudności, obszary, na których chcesz się skupić, i ból karku oraz lędźwi z ostatnich raportów – wygładzony, żeby jeden gorszy dzień nie wywracał całego planu.</p></div></li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-shuffle"/></svg></span><div><h3>Równowaga i różnorodność</h3><p>Plan uzupełnia to, czego brakowało w ostatnim tygodniu, nie powtarza ciągle tych samych ćwiczeń i rozkłada pracę między poranek, przerwy i wieczór.</p></div></li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-activity"/></svg></span><div><h3>Dawka na dziś</h3><p>Serie, powtórzenia i czas mieszczą się w bezpiecznych widełkach. Po zgłoszonym bólu albo reakcji na ćwiczenie dawka maleje, a przy stabilnym samopoczuciu może stopniowo rosnąć.</p></div></li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-refresh-cw"/></svg></span><div><h3>Plan reaguje na raport</h3><p>Po raporcie dnia aplikacja przelicza nierozpoczęte sesje: wieczorną, kolejne przerwy i plany na następne dni.</p></div></li>
       </ol>
     </div>
   </section>
 
   <section class="block" id="partie">
     <div class="wrap">
-      <h2>Ćwiczenia na każdą partię</h2>
-      <p class="intro">Katalog filtrujesz po partii ciała i sprzęcie. Każde ćwiczenie ma ilustracje etapów ruchu, opis, najczęstsze błędy i przeciwwskazania.</p>
+      <h2 class="reveal">Ćwiczenia na każdą partię</h2>
+      <p class="intro reveal">Katalog filtrujesz po partii ciała i sprzęcie. Każde ćwiczenie ma ilustracje etapów ruchu, opis, najczęstsze błędy i przeciwwskazania.</p>
       <ul class="tiles">
-        <li><span class="ico"><svg><use href="#i-mk-kark"/></svg></span>Kark</li>
-        <li><span class="ico"><svg><use href="#i-mk-lopatki"/></svg></span>Odcinek piersiowy i łopatki</li>
-        <li><span class="ico"><svg><use href="#i-mk-ledzwie"/></svg></span>Lędźwie</li>
-        <li><span class="ico"><svg><use href="#i-mk-kregoslup"/></svg></span>Cały kręgosłup</li>
-        <li><span class="ico"><svg><use href="#i-mk-core"/></svg></span>Brzuch i core</li>
-        <li><span class="ico"><svg><use href="#i-mk-biodra"/></svg></span>Pośladki i biodra</li>
-        <li><span class="ico"><svg><use href="#i-mk-biurko"/></svg></span>Przy biurku</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-kark"/></svg></span>Kark</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-lopatki"/></svg></span>Odcinek piersiowy i łopatki</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-ledzwie"/></svg></span>Lędźwie</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-kregoslup"/></svg></span>Cały kręgosłup</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-core"/></svg></span>Brzuch i core</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-biodra"/></svg></span>Pośladki i biodra</li>
       </ul>
     </div>
   </section>
 
-  <section class="block alt" id="sprzet">
+  <section class="block band band--tint" id="sprzet">
     <div class="wrap">
-      <h2>Ćwiczysz z tym, co masz</h2>
-      <p class="intro">Większość ćwiczeń nie wymaga sprzętu. Zaznaczasz w aplikacji, co masz pod ręką, a plan sięga tylko po to.</p>
+      <h2 class="reveal">Ćwiczysz z tym, co masz</h2>
+      <p class="intro reveal">Większość ćwiczeń nie wymaga sprzętu. Zaznaczasz w aplikacji, co masz pod ręką, a plan sięga tylko po to.</p>
       <ul class="tiles">
-        <li><span class="ico"><svg><use href="#i-mk-mata"/></svg></span>Bez sprzętu</li>
-        <li><span class="ico"><svg><use href="#i-mk-guma"/></svg></span>Mini-pętla</li>
-        <li><span class="ico"><svg><use href="#i-mk-guma-kotwica"/></svg></span>Guma z kotwicą do drzwi</li>
-        <li><span class="ico"><svg><use href="#i-mk-dluga-guma"/></svg></span>Długa guma</li>
-        <li><span class="ico"><svg><use href="#i-dumbbell"/></svg></span>Hantle 1–3 kg</li>
-        <li><span class="ico"><svg><use href="#i-mk-krzeslo"/></svg></span>Krzesło</li>
-        <li><span class="ico"><svg><use href="#i-mk-krzeslo-stabilne"/></svg></span>Krzesło bez kółek</li>
-        <li><span class="ico"><svg><use href="#i-mk-sciana"/></svg></span>Ściana</li>
-        <li><span class="ico"><svg><use href="#i-mk-recznik"/></svg></span>Ręcznik</li>
-        <li><span class="ico"><svg><use href="#i-mk-framuga"/></svg></span>Framuga</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-mata"/></svg></span>Bez sprzętu</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-guma"/></svg></span>Mini-pętla</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-guma-kotwica"/></svg></span>Guma z kotwicą do drzwi</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-dluga-guma"/></svg></span>Długa guma</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-dumbbell"/></svg></span>Hantle 1–3 kg</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-krzeslo"/></svg></span>Krzesło</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-krzeslo-stabilne"/></svg></span>Krzesło bez kółek</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-sciana"/></svg></span>Ściana</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-recznik"/></svg></span>Ręcznik</li>
+        <li class="reveal"><span class="ico"><svg><use href="#i-mk-framuga"/></svg></span>Framuga</li>
       </ul>
     </div>
   </section>
 
   <section class="block" id="lektorzy">
     <div class="wrap">
-      <h2>Pięcioro lektorów mówiących po polsku</h2>
-      <p class="intro">Lektor prowadzi przez każde ćwiczenie: mówi, co robić, pilnuje tempa i przypomina o oddechu. Wybierasz styl, który Ci pasuje.</p>
+      <h2 class="reveal">Pięcioro lektorów mówiących po polsku</h2>
+      <p class="intro reveal">Lektor prowadzi przez każde ćwiczenie: mówi, co robić, pilnuje tempa i przypomina o oddechu. Wybierasz styl, który Ci pasuje.</p>
       <ul class="voices">
-        <li><img src="img/lektorzy/zofia.webp" alt="" width="80" height="80" loading="lazy"><strong>Zofia</strong><span>opiekuńcza i ciepła</span></li>
-        <li><img src="img/lektorzy/matylda.webp" alt="" width="80" height="80" loading="lazy"><strong>Matylda</strong><span>rzeczowa, bez zbędnych słów</span></li>
-        <li><img src="img/lektorzy/marek.webp" alt="" width="80" height="80" loading="lazy"><strong>Marek</strong><span>tłumaczy, jak pracują mięśnie</span></li>
-        <li><img src="img/lektorzy/mnich.webp" alt="" width="80" height="80" loading="lazy"><strong>Mnich</strong><span>spokojny, skupiony na oddechu</span></li>
-        <li><img src="img/lektorzy/czarek.webp" alt="" width="80" height="80" loading="lazy"><strong>Czarek</strong><span>wymagający, dosadny – przeklina</span></li>
+        <li class="reveal"><img src="img/lektorzy/zofia.webp" alt="" width="92" height="92" loading="lazy"><strong>Zofia</strong><span>opiekuńcza i ciepła</span></li>
+        <li class="reveal"><img src="img/lektorzy/matylda.webp" alt="" width="92" height="92" loading="lazy"><strong>Matylda</strong><span>rzeczowa, bez zbędnych słów</span></li>
+        <li class="reveal"><img src="img/lektorzy/marek.webp" alt="" width="92" height="92" loading="lazy"><strong>Marek</strong><span>tłumaczy, jak pracują mięśnie</span></li>
+        <li class="reveal"><img src="img/lektorzy/mnich.webp" alt="" width="92" height="92" loading="lazy"><strong>Mnich</strong><span>spokojny, skupiony na oddechu</span></li>
+        <li class="reveal"><img src="img/lektorzy/czarek.webp" alt="" width="92" height="92" loading="lazy"><strong>Czarek</strong><span>wymagający, dosadny – przeklina</span></li>
       </ul>
     </div>
   </section>
 
-  <section class="block alt">
+  <section class="block band band--deep">
     <div class="wrap">
-      <h2>Zobacz aplikację</h2>
-      <div class="gallery" tabindex="0" aria-label="Zrzuty ekranu">
+      <h2 class="reveal">Zobacz aplikację</h2>
+      <div class="gallery" tabindex="0" role="region" aria-label="Zrzuty ekranu">
         <img src="img/ekran-plan-dnia.png" alt="Plan Dnia" width="540" height="960" loading="lazy">
         <img src="img/ekran-timer.png" alt="Timer z lektorem" width="540" height="960" loading="lazy">
         <img src="img/ekran-katalog.png" alt="Katalog ćwiczeń" width="540" height="960" loading="lazy">
@@ -195,16 +203,17 @@
   <section class="block">
     <div class="wrap">
       <div class="grid3">
-        <div class="card feat"><span class="ico"><svg><use href="#i-notebook-pen"/></svg></span><h3>Napisane po polsku</h3><p>To nie tłumaczenie zagranicznej aplikacji. Instrukcje, opisy i dialogi lektorów powstały od początku po polsku, z myślą o polskich użytkownikach.</p></div>
-        <div class="card feat"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Dane zostają u Ciebie</h3><p>Aplikacja nie ma dostępu do internetu, kont ani serwera. Nic nie jest wysyłane – kopię zapasową robisz sam, kiedy chcesz.</p></div>
-        <div class="card feat"><span class="ico"><svg><use href="#i-bell"/></svg></span><h3>Przypomnienia i statystyki</h3><p>Przypomnienia o sesjach i przerwach, wykres samopoczucia, kroki z Health Connect, odznaki i 15 motywów kolorów.</p></div>
+        <div class="card feat reveal"><span class="ico"><svg><use href="#i-notebook-pen"/></svg></span><h3>Napisane po polsku</h3><p>To nie tłumaczenie zagranicznej aplikacji. Instrukcje, opisy i dialogi lektorów powstały od początku po polsku, z myślą o polskich użytkownikach.</p></div>
+        <div class="card feat reveal"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Dane zostają u Ciebie</h3><p>Aplikacja nie ma dostępu do internetu, kont ani serwera. Nic nie jest wysyłane – kopię zapasową robisz sam, kiedy chcesz.</p></div>
+        <div class="card feat reveal"><span class="ico"><svg><use href="#i-bell"/></svg></span><h3>Przypomnienia i statystyki</h3><p>Przypomnienia o sesjach i przerwach, wykres samopoczucia, kroki z Health Connect, odznaki i 15 motywów kolorów.</p></div>
       </div>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="price">
+      <div class="price reveal">
+        <span class="deco" aria-hidden="true"></span>
         <span class="ico"><svg><use href="#i-banknote"/></svg></span>
         <div>
           <h2>Płacisz raz. Bez niespodzianek.</h2>
@@ -221,7 +230,7 @@
 
   <section class="block">
     <div class="wrap">
-      <div class="warn">
+      <div class="warn reveal">
         <span class="ico"><svg><use href="#i-stethoscope"/></svg></span>
         <p><strong>Ważne.</strong> Moje Kręgi to aplikacja o ogólnej aktywności fizycznej i profilaktyce dla osób dorosłych. Nie jest wyrobem medycznym, nie służy do leczenia i nie zastępuje porady lekarza ani fizjoterapeuty. Jeśli masz dolegliwości, jesteś po urazie, operacji albo w ciąży, przed rozpoczęciem ćwiczeń skonsultuj się z lekarzem. Przy bólu promieniującym do ręki lub nogi, drętwieniu albo osłabieniu siły nie ćwicz i skontaktuj się z lekarzem. Gdy podczas ćwiczeń pojawi się niepokojący objaw, przerwij i skontaktuj się z lekarzem.</p>
       </div>
