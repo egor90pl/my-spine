@@ -17,7 +17,8 @@ img { max-width: 100%; height: auto; }
 .narrow { max-width: 720px; }
 
 header.top { border-bottom: 1px solid var(--line); background: var(--surface); }
-header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; min-height: 64px; flex-wrap: wrap;
+  padding-top: max(12px, env(safe-area-inset-top)); padding-bottom: 10px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.1rem; }
 .brand img { width: 36px; height: 36px; }
 nav.links { display: flex; gap: 18px; flex-wrap: wrap; font-size: .95rem; }
