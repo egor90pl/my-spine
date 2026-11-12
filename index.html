@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moje Kręgi – ćwiczenia na kręgosłup z polskim lektorem</title>
-<meta name="description" content="Codzienny plan ćwiczeń na kark, plecy i biodra z lektorem po polsku. 74 ćwiczenia, jednorazowy zakup, bez reklam i abonamentu, działa bez internetu.">
+<meta name="description" content="Codzienny plan ćwiczeń na kark, plecy i biodra z lektorem po polsku. 74 ćwiczenia dobierane do Twojego samopoczucia i sprzętu. Jednorazowy zakup, bez reklam i abonamentu, działa bez internetu.">
 <meta name="theme-color" content="#38614F">
 <meta property="og:title" content="Moje Kręgi – ćwiczenia na kręgosłup">
 <meta property="og:description" content="Plan dnia, timer z lektorem po polsku i 74 ćwiczenia. Jednorazowy zakup, bez reklam i abonamentu.">
@@ -14,6 +14,43 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!--SPRITE: ikony z src/ui/kit/icons.svg (Lucide ISC + własne ikony Moje Kręgi), prefiks i- -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<symbol id="i-mk-kark" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M9.5 14C7.9 13 7 11.4 7 9.6a5 5 0 0 1 10 0c0 1.8-.9 3.4-2.5 4.4M9.5 14v1.6c0 1.6-1.4 1.9-2.6 2.3-1.4.4-2.4 1-2.7 2.4M14.5 14v1.6c0 1.6 1.4 1.9 2.6 2.3 1.4.4 2.4 1 2.7 2.4M11.1 14h1.8M11.1 16.2h1.8M11.1 18.4h1.8"/></g></symbol>
+<symbol id="i-mk-lopatki" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M10.4 4c0 2-1.4 2.9-3.2 3.4-2.4.6-3.4 2-3.6 5.2M13.6 4c0 2 1.4 2.9 3.2 3.4 2.4.6 3.4 2 3.6 5.2M6 12.4c.2 2.2 1.7 3.4 1.4 7M18 12.4c-.2 2.2-1.7 3.4-1.4 7"/><path d="M6.4 9.7c.8-.6 2-.6 2.9-.2.4.3.4.7.2 1.2l-1 3c-.2.7-.9.7-1.2 0zM17.6 9.7c-.8-.6-2-.6-2.9-.2-.4.3-.4.7-.2 1.2l1 3c.2.7.9.7 1.2 0zM11.3 11h1.4M11.3 13.2h1.4"/></g></symbol>
+<symbol id="i-mk-ledzwie" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M10.4 3c0 1.9-1.2 2.6-2.8 3-1.7.4-2.3 1.6-2.4 4.4M13.6 3c0 1.9 1.2 2.6 2.8 3 1.7.4 2.3 1.6 2.4 4.4M7.4 9.4c-.3 2 1.6 3.2 1.6 5 0 1.6-1.9 2.8-1.7 5.4M16.6 9.4c.3 2-1.6 3.2-1.6 5 0 1.6 1.9 2.8 1.7 5.4M7.3 19.8c.6.9 3.7 1.4 4.7.1v-1.5M16.7 19.8c-.6.9-3.7 1.4-4.7.1M11.1 11.6h1.8M11.1 13.8h1.8M11.1 16h1.8"/></g></symbol>
+<symbol id="i-mk-kregoslup" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M10.4 3c0 1.9-1.2 2.6-2.8 3-1.7.4-2.3 1.6-2.4 4.4M13.6 3c0 1.9 1.2 2.6 2.8 3 1.7.4 2.3 1.6 2.4 4.4M7.4 9.4c-.3 2 1.6 3.2 1.6 5 0 1.6-1.9 2.8-1.7 5.4M16.6 9.4c.3 2-1.6 3.2-1.6 5 0 1.6 1.9 2.8 1.7 5.4M7.3 19.8c.6.9 3.7 1.4 4.7.1v-1.5M16.7 19.8c-.6.9-3.7 1.4-4.7.1M11.1 4.2h1.8M11.1 6.6h1.8M11.1 9h1.8M11.1 11.4h1.8M11.1 13.8h1.8M11.1 16.2h1.8"/></g></symbol>
+<symbol id="i-mk-core" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M10.4 3c0 1.9-1.2 2.6-2.8 3-1.7.4-2.3 1.6-2.4 4.4M13.6 3c0 1.9 1.2 2.6 2.8 3 1.7.4 2.3 1.6 2.4 4.4M7.4 9.4c-.3 2 1.6 3.2 1.6 5 0 1.6-1.9 2.8-1.7 5.4M16.6 9.4c.3 2-1.6 3.2-1.6 5 0 1.6 1.9 2.8 1.7 5.4M7.3 19.8 12 21.4l4.7-1.6M12 10.8v6.4M10.6 12.4h2.8M10.6 15.4h2.8"/></g></symbol>
+<symbol id="i-mk-biodra" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M8.6 4c.6 2.6.5 3.6-.6 4.9-1.2 1.4-1.7 2.5-1.7 4.1 0 2 .9 4.6 1.6 7M15.4 4c-.6 2.6-.5 3.6.6 4.9 1.2 1.4 1.7 2.5 1.7 4.1 0 2-.9 4.6-1.6 7M6.6 14.4c.7 1.2 2 1.9 3.2 1.9 1.3 0 2.2-1 2.2-2.6 0 1.6.9 2.6 2.2 2.6 1.2 0 2.5-.7 3.2-1.9M12 16.2V20M11.1 5.8h1.8M11.1 8h1.8"/></g></symbol>
+<symbol id="i-mk-biurko" viewBox="0 0 24 24"><g stroke-width="1.2"><circle cx="8.6" cy="5.4" r="2.4"/><path d="M7.2 8.6C6.2 10 6 11.6 6 13.4c0 .9.6 1.6 1.6 1.6h4.2l1 5h1.8M7.8 9.4l1.8 2.4c.3.4.7.6 1.2.6h3M10 12.7h9.4M17.6 12.7v7.5M19.4 7.2l-1.9 5.3M4 10.2c.2 2.2-.1 4 .9 5.6l-1.5 4.4"/></g></symbol>
+<symbol id="i-mk-mata" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M18.2 16H3.4c-.8 0-1.2-.9-.7-1.5l2.8-3.8c.2-.3.5-.4.8-.4h9.4M15.6 10.4c.5-1.6 1.7-2.5 3-2.5 2 0 3.2 1.8 3.2 4.1 0 2.3-1.7 4-3.7 4-1.9 0-3.1-1.2-3.1-2.8 0-1.3 1-2.2 2.1-2.2 1 0 1.7.7 1.7 1.6 0 .7-.5 1.2-1.1 1.2"/></g></symbol>
+<symbol id="i-mk-guma" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M2.4 10.6C2.4 9 4 8 6 8c3.8 0 7.4 4.6 12 4.6 2 0 3.6-.9 3.6-2.4 0-1.6-1.6-2.6-3.6-2.6-4.6 0-8.2 4.6-12 4.6-2 0-3.6-1-3.6-1.6zM2.4 10.6v2.8c0 1.6 1.6 2.6 3.6 2.6 2.6 0 4.6-1.2 6.4-2.5M21.6 10.2v3.2c0 1.6-1.6 2.6-3.6 2.6-2.2 0-3.9-.9-5.6-2.1"/></g></symbol>
+<symbol id="i-mk-guma-kotwica" viewBox="0 0 24 24"><g stroke-width="1.2"><rect x="2.6" y="6" width="1.8" height="12" rx=".6"/><path d="M4.4 10.6h1.4a1.4 1.4 0 0 1 0 2.8H4.4M7.2 12h9.4M16.6 11v2M16.6 11.8l4-2.3c.4-.2.9.1.9.5v4c0 .4-.5.7-.9.5l-4-2.3"/></g></symbol>
+<symbol id="i-mk-dluga-guma" viewBox="0 0 24 24"><g stroke-width="1.2"><rect x="1.6" y="8.6" width="20.8" height="3.2" rx="1.6"/><path d="M1.6 10.2V13c0 .9 1 1.6 2 1.6h16.8c1 0 2-.7 2-1.6v-2.8"/></g></symbol>
+<symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z" /><path d="m2.5 21.5 1.4-1.4" /><path d="m20.1 3.9 1.4-1.4" /><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z" /><path d="m9.6 14.4 4.8-4.8" /></symbol>
+<symbol id="i-mk-krzeslo" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M7.2 4.2c-.2-1 1-1.6 1.7-.8 1.3 1.6 1.6 4.6 1.3 7 0 .5.3.8.8.8h5.4c1.4 0 1.4 2.2 0 2.2h-6c-1.6 0-2.4-.9-2.7-2.3zM12 13.4v3M12 16.4l-4 1.8M12 16.4l4 1.8M12 16.4v2.3"/><circle cx="7.4" cy="19.2" r=".9"/><circle cx="12" cy="19.8" r=".9"/><circle cx="16.6" cy="19.2" r=".9"/></g></symbol>
+<symbol id="i-mk-krzeslo-stabilne" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M7.4 11l-.9-6.3c0-.4.2-.7.6-.7l4.4-.4c.4 0 .7.2.8.6l.9 5.7M7.4 11l5.6-1.1 4.6 1c.6.2.6.9 0 1l-6.2 1.1c-.3 0-.6 0-.9-.1L7 12c-.4-.2-.2-.8.4-1zM7.8 12.4l-1.1 6.1M11.4 13.2l.4 6.8M17 12.4l.6 6.1"/></g></symbol>
+<symbol id="i-mk-sciana" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M5 7h14v3.4H5zM12 7v3.4M3.4 10.4h17.2v3.4H3.4zM8.4 10.4v3.4M15.6 10.4v3.4M5 13.8h14v3.4H5zM12 13.8v3.4"/></g></symbol>
+<symbol id="i-mk-recznik" viewBox="0 0 24 24"><g stroke-width="1.2"><rect x="4" y="11.4" width="16.2" height="3" rx="1.5"/><path d="M5.5 14.4c-1 0-1.5.8-1.5 1.5s.6 1.6 1.6 1.6h13c1 0 1.6-.8 1.6-1.6s-.5-1.5-1.5-1.5M5.1 11.6l1.8-3.6c.4-.8 1.2-1.3 2.1-1.3h6c.9 0 1.7.5 2.1 1.3l1.8 3.6"/></g></symbol>
+<symbol id="i-mk-framuga" viewBox="0 0 24 24"><g stroke-width="1.2"><path d="M7.4 19.2V4.8h9.2v14.4M5 19.2h14"/></g></symbol>
+<symbol id="i-shield-alert" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="M12 8v4" /><path d="M12 16h.01" /></symbol>
+<symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3" /><path d="M12 19H3" /><path d="M14 3v4" /><path d="M16 17v4" /><path d="M21 12h-9" /><path d="M21 19h-5" /><path d="M21 5h-7" /><path d="M8 10v4" /><path d="M8 12H3" /></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="m18 14 4 4-4 4" /><path d="m18 2 4 4-4 4" /><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22" /><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2" /><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45" /></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></symbol>
+<symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></symbol>
+<symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M12 2v8" /><path d="m4.93 10.93 1.41 1.41" /><path d="M2 18h2" /><path d="M20 18h2" /><path d="m19.07 10.93-1.41 1.41" /><path d="M22 22H2" /><path d="m8 6 4-4 4 4" /><path d="M16 18a4 4 0 0 0-8 0" /></symbol>
+<symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2" /><path d="M14 2v2" /><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" /><path d="M6 2v2" /></symbol>
+<symbol id="i-sunset" viewBox="0 0 24 24"><path d="M12 10V2" /><path d="m4.93 10.93 1.41 1.41" /><path d="M2 18h2" /><path d="M20 18h2" /><path d="m19.07 10.93-1.41 1.41" /><path d="M22 22H2" /><path d="m16 6-4 4-4-4" /><path d="M16 18a4 4 0 0 0-8 0" /></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+<symbol id="i-banknote" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2" /><circle cx="12" cy="12" r="2" /><path d="M6 12h.01M18 12h.01" /></symbol>
+<symbol id="i-mic-vocal" viewBox="0 0 24 24"><path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12" /><path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5" /><circle cx="16" cy="7" r="5" /></symbol>
+<symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M11 2v2" /><path d="M5 2v2" /><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /><path d="M8 15a6 6 0 0 0 12 0v-3" /><circle cx="20" cy="10" r="2" /></symbol>
+<symbol id="i-notebook-pen" viewBox="0 0 24 24"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /><path d="M2 6h4" /><path d="M2 10h4" /><path d="M2 14h4" /><path d="M2 18h4" /><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0" /><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></symbol>
+<symbol id="i-footprints" viewBox="0 0 24 24"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+</svg>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./"><img src="img/logo-mark.svg" alt="" width="36" height="36">Moje Kręgi</a>
@@ -29,75 +66,142 @@
 <main>
   <div class="wrap hero">
     <div>
+      <p class="eyebrow">Profilaktyka kręgosłupa na co dzień</p>
       <h1>Codzienny ruch dla Twojego kręgosłupa</h1>
-      <p class="lead">Plan na cały dzień, timer z lektorem po polsku i 74 ćwiczenia na kark, plecy i biodra. Dla osób, które dużo siedzą i chcą regularnie o siebie dbać.</p>
+      <p class="lead">Plan na cały dzień, timer z lektorem po polsku i 74 ćwiczenia na kark, plecy i biodra – dobierane do tego, jak się dziś czujesz i jaki masz sprzęt.</p>
       <ul class="pills">
         <li>Jednorazowy zakup</li><li>Bez reklam</li><li>Bez abonamentu</li><li>Bez internetu</li><li>Po polsku</li>
       </ul>
       <!-- Po publikacji podmień href na https://play.google.com/store/apps/details?id=pl.rehabpro.karkledzwie i tekst na „Pobierz z Google Play”. -->
-      <a class="btn" href="#jak-dziala">Wkrótce w Google Play</a>
+      <a class="btn" href="#dobor">Wkrótce w Google Play</a>
       <p class="note">Aplikacja na Androida. Wersja tylko w języku polskim.</p>
     </div>
     <img class="shot" src="img/ekran-timer.png" alt="Timer z lektorem w aplikacji Moje Kręgi" width="540" height="960">
   </div>
 
-  <section class="block" id="jak-dziala">
+  <div class="wrap">
+    <ul class="stats" aria-label="W liczbach">
+      <li><strong>74</strong><span>ćwiczenia</span></li>
+      <li><strong>3</strong><span>pory dnia</span></li>
+      <li><strong>5</strong><span>lektorów</span></li>
+      <li><strong>0 zł</strong><span>abonamentu</span></li>
+    </ul>
+  </div>
+
+  <section class="block" id="dzien">
     <div class="wrap">
-      <h2>Jak to działa</h2>
-      <ol class="steps">
-        <li><strong>Krótki wywiad na start.</strong> Pytania o samopoczucie, urazy, ciążę, sprzęt i aktywność. Pytania o objawy alarmowe są obowiązkowe – jeśli coś wymaga konsultacji, aplikacja wyraźnie to powie.</li>
-        <li><strong>Plan Dnia.</strong> Poranna sesja na rozruszanie, krótkie przerwy od siedzenia w ciągu dnia i spokojna sesja wieczorna.</li>
-        <li><strong>Timer z lektorem.</strong> Lektor prowadzi przez każde ćwiczenie, pilnuje tempa i przypomina o oddechu i technice.</li>
-        <li><strong>Dziennik samopoczucia.</strong> Plan bierze pod uwagę, jak się czujesz: w gorszy dzień proponuje łagodniejsze ćwiczenia albo krótszą sesję.</li>
+      <h2>Twój dzień z Moimi Kręgami</h2>
+      <p class="intro">Krótkie sesje wplecione w zwykły dzień – bez szukania czasu na długi trening.</p>
+      <div class="grid3">
+        <div class="card feat"><span class="ico"><svg><use href="#i-sunrise"/></svg></span><h3>Rano</h3><p>Kilkuminutowa sesja na rozruszanie karku, pleców i bioder po nocy.</p></div>
+        <div class="card feat"><span class="ico"><svg><use href="#i-coffee"/></svg></span><h3>Przerwy od siedzenia</h3><p>Krótkie zestawy przy biurku, z przypomnieniem co ustalony czas.</p></div>
+        <div class="card feat"><span class="ico"><svg><use href="#i-sunset"/></svg></span><h3>Wieczór</h3><p>Spokojniejsza sesja i raport dnia: jak się czujesz, co dolegało.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="dobor">
+    <div class="wrap">
+      <h2>Jak aplikacja dobiera ćwiczenia</h2>
+      <p class="intro">Za planem stoi silnik doboru, który działa jak lejek: najpierw odsiewa to, co dziś może zaszkodzić, potem z bezpiecznej puli wybiera ćwiczenia najlepiej dopasowane do Ciebie i ustala dawkę. Każdą decyzję widzisz w aplikacji pod „Jak dopasowano plan”.</p>
+      <ol class="funnel">
+        <li><span class="ico"><svg><use href="#i-shield-alert"/></svg></span><div><h3>Najpierw bezpieczeństwo</h3><p>Objawy alarmowe z wywiadu i raportów zawsze kończą się zaleceniem konsultacji z lekarzem, a przy poważnych plan nie proponuje ćwiczeń. Przeciwwskazania (np. osteoporoza, ciąża, stan po operacji) wykluczają nieodpowiednie ćwiczenia. Tych filtrów nic nie zdejmuje – gdy brakuje zamiennika, aplikacja wybiera łagodniejszą wersję albo krótszy plan.</p></div></li>
+        <li><span class="ico"><svg><use href="#i-sliders-horizontal"/></svg></span><div><h3>Dopasowanie do Ciebie</h3><p>Liczy się sprzęt, który masz, wybrany poziom trudności, obszary, na których chcesz się skupić, i ból karku oraz lędźwi z ostatnich raportów – wygładzony, żeby jeden gorszy dzień nie wywracał całego planu.</p></div></li>
+        <li><span class="ico"><svg><use href="#i-shuffle"/></svg></span><div><h3>Równowaga i różnorodność</h3><p>Plan uzupełnia to, czego brakowało w ostatnim tygodniu, nie powtarza ciągle tych samych ćwiczeń i rozkłada pracę między poranek, przerwy i wieczór.</p></div></li>
+        <li><span class="ico"><svg><use href="#i-activity"/></svg></span><div><h3>Dawka na dziś</h3><p>Serie, powtórzenia i czas mieszczą się w bezpiecznych widełkach. Po zgłoszonym bólu albo reakcji na ćwiczenie dawka maleje, a przy stabilnym samopoczuciu może stopniowo rosnąć.</p></div></li>
+        <li><span class="ico"><svg><use href="#i-refresh-cw"/></svg></span><div><h3>Plan reaguje na raport</h3><p>Po raporcie dnia aplikacja przelicza nierozpoczęte sesje: wieczorną, kolejne przerwy i plany na następne dni.</p></div></li>
       </ol>
     </div>
   </section>
 
-  <section class="block">
+  <section class="block" id="partie">
+    <div class="wrap">
+      <h2>Ćwiczenia na każdą partię</h2>
+      <p class="intro">Katalog filtrujesz po partii ciała i sprzęcie. Każde ćwiczenie ma ilustracje etapów ruchu, opis, najczęstsze błędy i przeciwwskazania.</p>
+      <ul class="tiles">
+        <li><span class="ico"><svg><use href="#i-mk-kark"/></svg></span>Kark</li>
+        <li><span class="ico"><svg><use href="#i-mk-lopatki"/></svg></span>Odcinek piersiowy i łopatki</li>
+        <li><span class="ico"><svg><use href="#i-mk-ledzwie"/></svg></span>Lędźwie</li>
+        <li><span class="ico"><svg><use href="#i-mk-kregoslup"/></svg></span>Cały kręgosłup</li>
+        <li><span class="ico"><svg><use href="#i-mk-core"/></svg></span>Brzuch i core</li>
+        <li><span class="ico"><svg><use href="#i-mk-biodra"/></svg></span>Pośladki i biodra</li>
+        <li><span class="ico"><svg><use href="#i-mk-biurko"/></svg></span>Przy biurku</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block alt" id="sprzet">
+    <div class="wrap">
+      <h2>Ćwiczysz z tym, co masz</h2>
+      <p class="intro">Większość ćwiczeń nie wymaga sprzętu. Zaznaczasz w aplikacji, co masz pod ręką, a plan sięga tylko po to.</p>
+      <ul class="tiles">
+        <li><span class="ico"><svg><use href="#i-mk-mata"/></svg></span>Bez sprzętu</li>
+        <li><span class="ico"><svg><use href="#i-mk-guma"/></svg></span>Mini-pętla</li>
+        <li><span class="ico"><svg><use href="#i-mk-guma-kotwica"/></svg></span>Guma z kotwicą do drzwi</li>
+        <li><span class="ico"><svg><use href="#i-mk-dluga-guma"/></svg></span>Długa guma</li>
+        <li><span class="ico"><svg><use href="#i-dumbbell"/></svg></span>Hantle 1–3 kg</li>
+        <li><span class="ico"><svg><use href="#i-mk-krzeslo"/></svg></span>Krzesło</li>
+        <li><span class="ico"><svg><use href="#i-mk-krzeslo-stabilne"/></svg></span>Krzesło bez kółek</li>
+        <li><span class="ico"><svg><use href="#i-mk-sciana"/></svg></span>Ściana</li>
+        <li><span class="ico"><svg><use href="#i-mk-recznik"/></svg></span>Ręcznik</li>
+        <li><span class="ico"><svg><use href="#i-mk-framuga"/></svg></span>Framuga</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="lektorzy">
+    <div class="wrap">
+      <h2>Pięcioro lektorów mówiących po polsku</h2>
+      <p class="intro">Lektor prowadzi przez każde ćwiczenie: mówi, co robić, pilnuje tempa i przypomina o oddechu. Wybierasz styl, który Ci pasuje.</p>
+      <ul class="voices">
+        <li><img src="img/lektorzy/zofia.webp" alt="" width="80" height="80" loading="lazy"><strong>Zofia</strong><span>opiekuńcza i ciepła</span></li>
+        <li><img src="img/lektorzy/matylda.webp" alt="" width="80" height="80" loading="lazy"><strong>Matylda</strong><span>rzeczowa, bez zbędnych słów</span></li>
+        <li><img src="img/lektorzy/marek.webp" alt="" width="80" height="80" loading="lazy"><strong>Marek</strong><span>tłumaczy, jak pracują mięśnie</span></li>
+        <li><img src="img/lektorzy/mnich.webp" alt="" width="80" height="80" loading="lazy"><strong>Mnich</strong><span>spokojny, skupiony na oddechu</span></li>
+        <li><img src="img/lektorzy/czarek.webp" alt="" width="80" height="80" loading="lazy"><strong>Czarek</strong><span>wymagający, dosadny – przeklina</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block alt">
     <div class="wrap">
       <h2>Zobacz aplikację</h2>
       <div class="gallery" tabindex="0" aria-label="Zrzuty ekranu">
         <img src="img/ekran-plan-dnia.png" alt="Plan Dnia" width="540" height="960" loading="lazy">
         <img src="img/ekran-timer.png" alt="Timer z lektorem" width="540" height="960" loading="lazy">
         <img src="img/ekran-katalog.png" alt="Katalog ćwiczeń" width="540" height="960" loading="lazy">
-        <img src="img/ekran-opis.png" alt="Opis ćwiczenia" width="540" height="960" loading="lazy">
+        <img src="img/ekran-opis.png" alt="Opis ćwiczenia z ilustracjami" width="540" height="960" loading="lazy">
+        <img src="img/ekran-dziennik.png" alt="Raport dzienny" width="540" height="960" loading="lazy">
+        <img src="img/ekran-statystyki.png" alt="Wykres w Statystykach" width="540" height="960" loading="lazy">
         <img src="img/ekran-lektorzy.png" alt="Wybór lektora" width="540" height="960" loading="lazy">
-        <img src="img/ekran-statystyki.png" alt="Statystyki" width="540" height="960" loading="lazy">
+        <img src="img/ekran-motywy.png" alt="Motywy kolorystyczne" width="540" height="960" loading="lazy">
       </div>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <h2>Co znajdziesz w środku</h2>
-      <div class="grid">
-        <div class="card"><h3>74 ćwiczenia</h3><p>Kark, odcinek piersiowy i lędźwiowy, pośladki, biodra i ćwiczenia przy biurku. Bez sprzętu, z gumą oporową lub z hantlami.</p></div>
-        <div class="card"><h3>Ilustracje i opisy</h3><p>Każde ćwiczenie ma ilustracje kolejnych etapów ruchu, opis wykonania, najczęstsze błędy i przeciwwskazania.</p></div>
-        <div class="card"><h3>Pięcioro lektorów</h3><p>Opiekuńcza Zofia, rzeczowa Matylda, Marek od biomechaniki, spokojny Mnich i dosadny Czarek (przeklina – można wybrać innego).</p></div>
-        <div class="card"><h3>Przypomnienia</h3><p>O sesji porannej i wieczornej oraz o przerwach od siedzenia – o porach, które ustawisz.</p></div>
-        <div class="card"><h3>Statystyki i odznaki</h3><p>Dziennik samopoczucia, regularność ćwiczeń i kroki z Health Connect, jeśli je włączysz.</p></div>
-        <div class="card"><h3>15 motywów</h3><p>Od spokojnej Szałwii po ciemny Ocean – wybierasz w Ustawieniach.</p></div>
+      <div class="grid3">
+        <div class="card feat"><span class="ico"><svg><use href="#i-notebook-pen"/></svg></span><h3>Napisane po polsku</h3><p>To nie tłumaczenie zagranicznej aplikacji. Instrukcje, opisy i dialogi lektorów powstały od początku po polsku, z myślą o polskich użytkownikach.</p></div>
+        <div class="card feat"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Dane zostają u Ciebie</h3><p>Aplikacja nie ma dostępu do internetu, kont ani serwera. Nic nie jest wysyłane – kopię zapasową robisz sam, kiedy chcesz.</p></div>
+        <div class="card feat"><span class="ico"><svg><use href="#i-bell"/></svg></span><h3>Przypomnienia i statystyki</h3><p>Przypomnienia o sesjach i przerwach, wykres samopoczucia, kroki z Health Connect, odznaki i 15 motywów kolorów.</p></div>
       </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <h2>Napisane po polsku, nie przetłumaczone</h2>
-      <p>Moje Kręgi to nie tłumaczenie zagranicznej aplikacji. Instrukcje, opisy ćwiczeń i dialogi lektorów powstały od początku po polsku, naturalnym językiem, z myślą o polskich użytkownikach.</p>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
       <div class="price">
-        <h2>Płacisz raz. Bez niespodzianek.</h2>
-        <ul>
-          <li>Jednorazowy zakup w Google Play – cała aplikacja od razu.</li>
-          <li>Bez abonamentu, mikropłatności i ukrytych kosztów.</li>
-          <li>Bez reklam, bez konta i logowania.</li>
-          <li>Działa bez internetu. Twoje dane zostają na telefonie.</li>
-        </ul>
+        <span class="ico"><svg><use href="#i-banknote"/></svg></span>
+        <div>
+          <h2>Płacisz raz. Bez niespodzianek.</h2>
+          <ul class="checks">
+            <li><svg><use href="#i-check"/></svg>Jednorazowy zakup w Google Play – cała aplikacja od razu.</li>
+            <li><svg><use href="#i-check"/></svg>Bez abonamentu, mikropłatności i ukrytych kosztów.</li>
+            <li><svg><use href="#i-check"/></svg>Bez reklam, bez konta i logowania.</li>
+            <li><svg><use href="#i-check"/></svg>Działa bez internetu – także w podróży.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -105,7 +209,8 @@
   <section class="block">
     <div class="wrap">
       <div class="warn">
-        <strong>Ważne.</strong> Moje Kręgi to aplikacja o ogólnej aktywności fizycznej i profilaktyce dla osób dorosłych. Nie jest wyrobem medycznym, nie służy do leczenia i nie zastępuje porady lekarza ani fizjoterapeuty. Jeśli masz dolegliwości, jesteś po urazie, operacji albo w ciąży, przed rozpoczęciem ćwiczeń skonsultuj się z lekarzem. Przy bólu promieniującym do ręki lub nogi, drętwieniu albo osłabieniu siły nie ćwicz i skontaktuj się z lekarzem. Gdy podczas ćwiczeń pojawi się niepokojący objaw, przerwij i skontaktuj się z lekarzem.
+        <span class="ico"><svg><use href="#i-stethoscope"/></svg></span>
+        <p><strong>Ważne.</strong> Moje Kręgi to aplikacja o ogólnej aktywności fizycznej i profilaktyce dla osób dorosłych. Nie jest wyrobem medycznym, nie służy do leczenia i nie zastępuje porady lekarza ani fizjoterapeuty. Jeśli masz dolegliwości, jesteś po urazie, operacji albo w ciąży, przed rozpoczęciem ćwiczeń skonsultuj się z lekarzem. Przy bólu promieniującym do ręki lub nogi, drętwieniu albo osłabieniu siły nie ćwicz i skontaktuj się z lekarzem. Gdy podczas ćwiczeń pojawi się niepokojący objaw, przerwij i skontaktuj się z lekarzem.</p>
       </div>
     </div>
   </section>
