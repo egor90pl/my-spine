@@ -24,7 +24,7 @@ nav.links { display: flex; gap: 18px; flex-wrap: wrap; font-size: .95rem; }
 nav.links a { text-decoration: none; color: var(--muted); }
 nav.links a:hover, nav.links a[aria-current="page"] { color: var(--accent); }
 
-.hero { padding: 56px 0 32px; display: grid; gap: 32px; grid-template-columns: 1.2fr .8fr; align-items: center; }
+.hero { padding-top: 56px; padding-bottom: 32px; display: grid; gap: 32px; grid-template-columns: 1.2fr .8fr; align-items: center; }
 .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 16px; }
 .hero p.lead { font-size: 1.2rem; color: var(--muted); margin: 0 0 24px; }
 .hero .shot { justify-self: center; max-width: 300px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,.18); }
