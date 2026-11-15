@@ -1,4 +1,4 @@
-/* Poradniki mojekregi.eu (M48): spis treści z podświetleniem, udostępnianie, druk, „na górę” i filtr huba.
+/* Poradniki mojekregi.eu (M48): spis treści z podświetleniem, udostępnianie, druk i „na górę”.
    Bez bibliotek; strona działa też bez JS. */
 (function () {
   'use strict';
@@ -53,29 +53,5 @@
     var onScroll = function () { top.classList.toggle('show', window.scrollY > 900); };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-  }
-
-  // ---------- hub: filtr i wyszukiwarka ----------
-  var cards = $$('.cards--bento > li');
-  if (cards.length) {
-    var cat = '', query = '';
-    var norm = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/g, 'l'); };
-    var apply = function () {
-      var shown = 0;
-      cards.forEach(function (li) {
-        var ok = (!cat || li.dataset.cat === cat) && (!query || norm(li.textContent).indexOf(query) !== -1);
-        li.hidden = !ok; if (ok) shown++;
-      });
-      $('.hub-empty').hidden = shown > 0;
-    };
-    $$('.filters .chip').forEach(function (b) {
-      b.addEventListener('click', function () {
-        cat = b.dataset.cat;
-        $$('.filters .chip').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-        apply();
-      });
-    });
-    var input = $('[data-role="search"]');
-    if (input) input.addEventListener('input', function () { query = norm(input.value.trim()); apply(); });
   }
 })();

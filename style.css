@@ -201,6 +201,7 @@ section.block h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); line-height: 1.15; l
 .bm-frames img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .bm-work { opacity: 0; }
 .bm-thumb figcaption { margin-top: 6px; font-size: .86rem; font-weight: 600; line-height: 1.3; }
+.bm-tap { display: none; margin: 14px 0 0; font-size: .85rem; color: var(--c-muted); text-align: center; }
 
 /* ---------- Sprzęt: wybór z licznikiem ćwiczeń ---------- */
 .gear { display: grid; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 32px; align-items: start; }
@@ -406,8 +407,11 @@ details p { margin: 10px 0 0; }
   .grid3 { grid-template-columns: 1fr; }
   .voices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .voices li:first-child { width: calc((100% - 14px) / 2); }
-  .body-map { grid-template-columns: 1fr; gap: 20px; }
-  .bm-figure { width: min(250px, 70vw); margin: 0 auto; }
+  .body-map { grid-template-columns: 1fr; gap: 12px; }
+  .bm-figure { width: min(230px, 62vw); margin: 0 auto; }
+  /* telefon: zamiast przycisków partii dotyk na sylwetce, karta od razu pod grafiką */
+  .body-map.bm--js .bm-chips { display: none; }
+  .body-map.bm--js .bm-tap { display: block; }
   .bm-panel { padding: 18px; }
   .bm-thumbs { gap: 8px; }
   .bm-thumb figcaption { font-size: .78rem; }
