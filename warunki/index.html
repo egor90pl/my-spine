@@ -3,21 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Warunki korzystania – Moje Kręgi</title>
+<script>try{var t=localStorage.getItem('mk-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>Warunki korzystania | Moje Kręgi</title>
 <meta name="theme-color" content="#38614F">
 <link rel="icon" href="../img/logo-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../style.css">
+<script src="../theme.js" defer></script>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../"><img src="../img/logo-mark.svg" alt="" width="36" height="36">Moje Kręgi</a>
-    <nav class="links" aria-label="Główna">
-      <a href="../">Start</a>
-      <a href="../pomoc/">Pomoc</a>
-      <a href="../polityka-prywatnosci/">Prywatność</a>
-      <a href="./" aria-current="page">Warunki</a>
-    </nav>
+    <div class="top-end">
+      <nav class="links" aria-label="Główna">
+        <a href="../">Start</a>
+        <a href="../poradniki/">Poradniki</a>
+        <a href="../pomoc/">Pomoc</a>
+        <a href="../polityka-prywatnosci/">Prywatność</a>
+        <a href="./" aria-current="page">Warunki</a>
+      </nav>
+      <button type="button" class="theme-toggle" aria-label="Przełącz jasny lub ciemny motyw"><svg class="ico-moon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="ico-sun" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+    </div>
   </div>
 </header>
 <main class="wrap narrow">
@@ -34,13 +40,13 @@
   <h2>3. Bezpieczeństwo ćwiczeń</h2>
   <ul>
     <li>Jeśli masz dolegliwości, jesteś po urazie lub operacji, w ciąży albo w okresie po porodzie, przed rozpoczęciem ćwiczeń skonsultuj się z lekarzem.</li>
-    <li>Odpowiadaj na pytania w aplikacji zgodnie z prawdą – od nich zależy dobór ćwiczeń i zalecenia.</li>
+    <li>Odpowiadaj na pytania w aplikacji zgodnie z prawdą, bo od nich zależy dobór ćwiczeń i zalecenia.</li>
     <li>Ćwicz w swoim tempie i w zakresie ruchu, który nie wywołuje bólu. Gdy pojawi się niepokojący objaw, przerwij i skontaktuj się z lekarzem.</li>
     <li>Gdy aplikacja zaleca konsultację z lekarzem, potraktuj to poważnie i nie kontynuuj ćwiczeń do czasu konsultacji.</li>
   </ul>
 
   <h2>4. Zakup i licencja</h2>
-  <p>Aplikację kupujesz jednorazowo w sklepie Google Play. Cena obejmuje całą aplikację – nie ma abonamentu, mikropłatności ani reklam. Zakup daje Ci prawo do korzystania z aplikacji do własnego, osobistego użytku na urządzeniach powiązanych z Twoim kontem Google, na zasadach Google Play. Nie wolno kopiować ani rozpowszechniać aplikacji, jej nagrań i ilustracji poza tym użytkiem.</p>
+  <p>Aplikację kupujesz jednorazowo w sklepie Google Play. Cena obejmuje całą aplikację. Nie ma abonamentu, mikropłatności ani reklam. Zakup daje Ci prawo do korzystania z aplikacji do własnego, osobistego użytku na urządzeniach powiązanych z Twoim kontem Google, na zasadach Google Play. Nie wolno kopiować ani rozpowszechniać aplikacji, jej nagrań i ilustracji poza tym użytkiem.</p>
 
   <h2>5. Płatności i zwroty</h2>
   <p>Płatność i zwroty obsługuje Google Play zgodnie ze swoimi zasadami. Krótko po zakupie zwrot można zwykle zgłosić bezpośrednio w Google Play. W innych sprawach dotyczących zakupu napisz na adres podany wyżej. Te warunki nie ograniczają praw, które przysługują Ci jako konsumentowi na podstawie przepisów prawa.</p>
@@ -65,6 +71,7 @@
   <div class="wrap">
     <span>© 2026 Moje Kręgi · <a href="mailto:pkpixelart@gmail.com">pkpixelart@gmail.com</a></span>
     <nav aria-label="Dokumenty">
+      <a href="../poradniki/">Poradniki</a>
       <a href="../pomoc/">Pomoc i kontakt</a>
       <a href="../polityka-prywatnosci/">Polityka prywatności</a>
       <a href="./">Warunki korzystania</a>
